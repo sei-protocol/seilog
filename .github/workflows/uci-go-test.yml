@@ -15,5 +15,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  go-lint:
+  go-test:
+    name: Go Test
     uses: sei-protocol/uci/.github/workflows/go-test.yml@masih/fixt-go-test-matrix
