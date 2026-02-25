@@ -1,4 +1,4 @@
-name: Stale Checker
+name: UCI Stale Check
 
 on:
   workflow_dispatch:
@@ -14,6 +14,7 @@ concurrency:
 
 jobs:
   stale:
+    name: Stale
     permissions:
       issues: write
       pull-requests: write
