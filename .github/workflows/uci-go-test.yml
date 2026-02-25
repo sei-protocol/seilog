@@ -17,4 +17,4 @@ concurrency:
 jobs:
   go-test:
     name: Go
-    uses: sei-protocol/uci/.github/workflows/go-test.yml@masih/fixt-go-test-matrix
+    uses: sei-protocol/uci/.github/workflows/go-test.yml@v0.0.8

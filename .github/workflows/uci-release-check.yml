@@ -17,4 +17,4 @@ concurrency:
 jobs:
   release-check:
     name: Release
-    uses: sei-protocol/uci/.github/workflows/release-check.yml@v0.0.7
+    uses: sei-protocol/uci/.github/workflows/release-check.yml@v0.0.8
