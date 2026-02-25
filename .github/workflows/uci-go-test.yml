@@ -1,4 +1,4 @@
-name: Go Linter
+name: Go Test
 
 on:
   pull_request:
@@ -16,4 +16,4 @@ concurrency:
 
 jobs:
   go-lint:
-    uses: sei-protocol/uci/.github/workflows/go-lint.yml@v0.0.7
+    uses: sei-protocol/uci/.github/workflows/go-test.yml@v0.0.6

@@ -14,4 +14,4 @@ concurrency:
 
 jobs:
   releaser:
-    uses: sei-protocol/uci/.github/workflows/release-publish.yml@v0.0.6
+    uses: sei-protocol/uci/.github/workflows/release-publish.yml@v0.0.7
