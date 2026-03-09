@@ -116,7 +116,6 @@ import (
 	"strings"
 	"sync"
 	"sync/atomic"
-	"syscall"
 )
 
 var (
@@ -214,7 +213,7 @@ func openLogFile(p string) (io.WriteCloser, error) {
 	// O_NOFOLLOW prevents opening symlinks at the final path component.
 	// Note: symlinks in parent directories are not checked; the operator
 	// is responsible for ensuring the path is trusted.
-	f, err := os.OpenFile(cleaned, os.O_CREATE|os.O_WRONLY|os.O_APPEND|syscall.O_NOFOLLOW, 0600)
+	f, err := os.OpenFile(cleaned, os.O_CREATE|os.O_WRONLY|os.O_APPEND|noFollowFlag, 0600)
 	if err != nil {
 		return nil, err
 	}
