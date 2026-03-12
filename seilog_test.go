@@ -602,7 +602,7 @@ func TestLevelFiltering_RuntimeChange(t *testing.T) {
 func TestOutput_JSONFormat(t *testing.T) {
 	// Write to a temp file by setting env before creating a sub-process.
 	// Since we can't re-init, we test by creating a logger and writing
-	// to the global handler (which defaults to JSON on stdout).
+	// to the global handler (which defaults to text on stdout).
 	// We redirect via a pipe.
 
 	// Use a temp file approach: create a logger, write, read back.
