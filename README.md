@@ -123,7 +123,7 @@ Output format, destination, and default level are configured at startup via envi
 | Variable | Values | Default |
 |---|---|---|
 | `SEI_LOG_LEVEL` | `debug`, `info`, `warn`, `error` | `info` |
-| `SEI_LOG_FORMAT` | `json`, `text` | `json` |
+| `SEI_LOG_FORMAT` | `json`, `text` | `text` |
 | `SEI_LOG_OUTPUT` | `stdout`, `stderr`, or an absolute file path | `stdout` |
 | `SEI_LOG_ADD_SOURCE` | `true`, `false` | `false` |
 

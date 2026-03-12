@@ -85,7 +85,7 @@
 // captured by each logger at creation time.
 //
 //	SEI_LOG_LEVEL      — Default level: debug, info, warn, error (default: info).
-//	SEI_LOG_FORMAT     — Output format: json or text (default: json).
+//	SEI_LOG_FORMAT     — Output format: json or text (default: text).
 //	SEI_LOG_OUTPUT     — Destination: stdout, stderr, or an absolute file path
 //	                     (default: stdout). File paths must not contain ".."
 //	                     components. Files are opened with mode 0600 and
@@ -227,10 +227,10 @@ func newHandler(format string, w io.Writer) slog.Handler {
 		Level:     slog.Level(math.MinInt), // Handler accepts all; LevelVar filters
 	}
 	switch strings.ToLower(strings.TrimSpace(format)) {
-	case "text", "plain":
-		return slog.NewTextHandler(w, opts)
-	default:
+	case "json":
 		return slog.NewJSONHandler(w, opts)
+	default:
+		return slog.NewTextHandler(w, opts)
 	}
 }
 
